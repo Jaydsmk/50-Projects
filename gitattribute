@@ -1,4 +1,0 @@
-*.javaScript linguist-detectable=true
-*.cpp linguist-detectable=false 
-*.html linguist-detectable=false
-
