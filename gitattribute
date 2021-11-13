@@ -1,2 +1,4 @@
-* linguist-vendored
-*.javascript linguist-vendored=false
+*.javaScript linguist-detectable=true
+*.cpp linguist-detectable=false 
+*.html linguist-detectable=false
+
