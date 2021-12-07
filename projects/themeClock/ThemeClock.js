@@ -52,6 +52,7 @@ function setTime() {
   const hoursForClock = hours % 12;
   const minutes = time.getMinutes();
   const seconds = time.getSeconds();
+  // console.log(seconds);
   const ampm = hours >= 12 ? "PM" : "AM";
 
   hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
@@ -61,6 +62,7 @@ function setTime() {
     0,
     360
   )}deg)`;
+
   minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     minutes,
     0,
@@ -68,6 +70,7 @@ function setTime() {
     0,
     360
   )}deg)`;
+
   secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     seconds,
     0,
