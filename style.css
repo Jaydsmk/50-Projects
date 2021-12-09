@@ -23,14 +23,41 @@ h1 {
   color: rgb(214, 27, 27);
 }
 
-li {
+.list {
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+}
+
+.list li {
+  /* position: absolute; */
+  /* display: inline-block; */
+  float: left;
+  margin: 10px 50px 10px 10px;
   padding: 10px;
 }
 
-ol {
+.list li a {
+  /* text-decoration: none; */
+  color: white;
+  /* padding: 10px; */
+  /* margin: 10px 3px; */
+  height: 10px;
+}
+.list li a:hover {
+  color: lightcoral;
+}
+
+
+/* .list ol {
   margin: 20px 80px 0;
   padding: 20px;
 }
+
+.list li {
+  padding: 10px;
+}
+
 
 a {
   text-decoration: none;
@@ -38,7 +65,7 @@ a {
   padding: 10px;
   margin: 10px 3px;
   height: 10px;
-}
+} */
 
 a:hover {
   color: lightcoral;
