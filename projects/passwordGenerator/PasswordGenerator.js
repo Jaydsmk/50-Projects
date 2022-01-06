@@ -89,7 +89,7 @@ function generatePassword(upper, lower, number, symbol, length) {
 // console.log(newNumbers);
 
 // fromCharCode() <-> charCodeAt()
-https: function getRandomLower() {
+function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
