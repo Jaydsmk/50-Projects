@@ -55,9 +55,9 @@ function generatePassword(upper, lower, number, symbol, length) {
   //   console.log(typesCount);
 
   const typesArr = [{ upper }, { lower }, { number }, { symbol }].filter(
-    (item) => Object.values(item)[0] // ????
+    (item) => Object.values(item)[0] // ???? --> filter function returns a true only
   );
-  //   console.log(typesArr);
+  console.log(typesArr);
 
   if (typesCount === 0) {
     return "";
