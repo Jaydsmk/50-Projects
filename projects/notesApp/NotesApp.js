@@ -1,6 +1,14 @@
 const addBtn = document.getElementById("add");
 
-addBtn.addEventListener("click", () => addNewNote("hello world"));
+const notes = JSON.parse(localStorage.getItem("notes"));
+
+console.log(notes);
+
+if (notes) {
+  notes.forEach((note) => addNewNote(note));
+}
+
+addBtn.addEventListener("click", () => addNewNote());
 
 function addNewNote(text = "") {
   const note = document.createElement("div");
@@ -28,6 +36,8 @@ function addNewNote(text = "") {
 
   deleteBtn.addEventListener("click", () => {
     note.remove();
+
+    updateLS();
   });
 
   editBtn.addEventListener("click", () => {
@@ -35,5 +45,32 @@ function addNewNote(text = "") {
     textArea.classList.toggle("hidden");
   });
 
+  textArea.addEventListener("input", (e) => {
+    const { value } = e.target;
+    // console.log(value);
+    main.innerHTML = marked(value);
+
+    updateLS();
+  });
+
   document.body.appendChild(note);
 }
+
+function updateLS() {
+  const notesText = document.querySelectorAll("textarea");
+
+  const notes = [];
+
+  notesText.forEach((note) => notes.push(note.value));
+  // console.log(notes);
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+}
+
+// ******** localStorage using method *****************
+// localStorage.setItem("name", "Brad");
+// localStorage.setItem("name", "[id: 1]");
+// localStorage.setItem("name", JSON.stringify());
+// JSON.parse(localStorage.getItem("name"));
+// localStorage.getItem("name");
+// localStorage.removeItem("name");
