@@ -29,13 +29,15 @@ h1 {
   max-width: 1200px;
   min-width: 550px;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .list li {
   float: left;
-  margin: 10px 50px 10px 10px;
+  margin: 10px 30px 10px 50px;
   padding: 10px;
+  flex: 1;
 }
 
 .list li a {
