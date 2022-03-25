@@ -1,5 +1,4 @@
 const tabs = document.querySelectorAll(".tab");
-const word = document.querySelector(".word");
 const h3 = document.querySelector("h3");
 
 const greeting = {
