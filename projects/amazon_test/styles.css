@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eee;
+    margin-top: 100px;
+}
+
+.container {
+    background-color: #fff;
+    width: 400px;
+    height: 200px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgreen;
+    color: white;
+}
+
+.tabs .tab {
+    width: 33%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabs .selected {
+    color: black;
+    background: white;
+    border-top: 2px lightgreen solid;
+}
+
+.word {
+    margin:50px 0 0 20px;
+}
